@@ -59,6 +59,8 @@ class ViewController: UIViewController {
             
             status.textColor = UIColor.white
             
+            todayBoard.keyboardAppearance = UIKeyboardAppearance.dark
+            noteToSelfBoard.keyboardAppearance = UIKeyboardAppearance.dark
         } else {
             //MARK: Makes the UI light and the text black (light mode).
             self.view.backgroundColor = UIColor.white
@@ -74,6 +76,9 @@ class ViewController: UIViewController {
             noteToSelfLabel.textColor = UIColor.black
             
             status.textColor = UIColor.black
+            
+            todayBoard.keyboardAppearance = UIKeyboardAppearance.light
+            noteToSelfBoard.keyboardAppearance = UIKeyboardAppearance.light
         }
     }
     
