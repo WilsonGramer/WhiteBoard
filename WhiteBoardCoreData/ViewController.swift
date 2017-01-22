@@ -132,6 +132,13 @@ class ViewController: UIViewController {
             status.text = "error while loading."
         }
     }
+    
+    //MARK: Clears the boards.
+    @IBAction func clearBoards(_ sender: Any) {
+        todayBoard.text = ""
+        noteToSelfBoard.text = ""
+        status.text = "Cleared."
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
