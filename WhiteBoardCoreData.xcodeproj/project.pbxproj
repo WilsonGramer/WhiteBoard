@@ -15,6 +15,7 @@
 		C8D3803A1E3446F300973167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D380391E3446F300973167 /* Assets.xcassets */; };
 		C8D3803D1E3446F300973167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D3803B1E3446F300973167 /* LaunchScreen.storyboard */; };
 		C8D380481E3446F300973167 /* WhiteBoardCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D380471E3446F300973167 /* WhiteBoardCoreDataTests.swift */; };
+		C8EA09BD1E3512940090E0F4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C8EA09BC1E3512940090E0F4 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +27,19 @@
 			remoteInfo = WhiteBoardCoreData;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C8EA098F1E34FFA40090E0F4 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Whiteboard.png; sourceTree = "<group>"; };
@@ -40,6 +54,7 @@
 		C8D380431E3446F300973167 /* WhiteBoardCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteBoardCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D380471E3446F300973167 /* WhiteBoardCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoardCoreDataTests.swift; sourceTree = "<group>"; };
 		C8D380491E3446F300973167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8EA09BC1E3512940090E0F4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +78,7 @@
 		C8D380231E3446F300973167 = {
 			isa = PBXGroup;
 			children = (
+				C8EA09BC1E3512940090E0F4 /* Settings.bundle */,
 				C8D3802E1E3446F300973167 /* WhiteBoardCoreData */,
 				C8D380461E3446F300973167 /* WhiteBoardCoreDataTests */,
 				C8D3802D1E3446F300973167 /* Products */,
@@ -112,6 +128,7 @@
 				C8D380281E3446F300973167 /* Sources */,
 				C8D380291E3446F300973167 /* Frameworks */,
 				C8D3802A1E3446F300973167 /* Resources */,
+				C8EA098F1E34FFA40090E0F4 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -189,6 +206,7 @@
 			files = (
 				C8D3803D1E3446F300973167 /* LaunchScreen.storyboard in Resources */,
 				C8D3803A1E3446F300973167 /* Assets.xcassets in Resources */,
+				C8EA09BD1E3512940090E0F4 /* Settings.bundle in Resources */,
 				C8AD439F1E34F7CA004ED0D0 /* Whiteboard.png in Resources */,
 				C8D380351E3446F300973167 /* Main.storyboard in Resources */,
 			);

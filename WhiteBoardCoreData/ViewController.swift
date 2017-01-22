@@ -10,12 +10,15 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-
+    
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var todayBoard: UITextView!
     @IBOutlet weak var noteToSelfBoard: UITextView!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var todayLabel: UILabel!
+    @IBOutlet weak var noteToSelfLabel: UILabel!
+    @IBOutlet weak var logoLabel: UILabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -27,60 +30,52 @@ class ViewController: UIViewController {
         
         //MARK: Auto load core data
         loadCoreData()
+        
+        //MARK: Check for dark mode toggle (call)
+        checkDarkModeSetting()
     }
     
-//    @IBAction func saveBoards(_ sender: Any) {
-//        let entityDescription =
-//            NSEntityDescription.entity(forEntityName: "BoardValues",
-//                                       in: managedObjectContext)
-//        
-//        let boardValues = BoardValues(entity: entityDescription!,
-//                               insertInto: managedObjectContext)
-//        
-//        boardValues.todayBoardValue = todayBoard.text!
-//        boardValues.noteToSelfBoardValue = noteToSelfBoard.text!
-//        
-//        do {
-//            try managedObjectContext.save()
-//            //todayBoard.text = ""
-//            //noteToSelfBoard.text = ""
-//            status.text = "Boards Saved"
-//            
-//        } catch let error {
-//            status.text = error.localizedDescription
-//        }
-//    }
-//    
-//    @IBAction func findBoards(_ sender: Any) {
-//        let entityDescription =
-//            NSEntityDescription.entity(forEntityName: "BoardValues",
-//                                       in: managedObjectContext)
-//        
-//        let request: NSFetchRequest<BoardValues> = BoardValues.fetchRequest()
-//        request.entity = entityDescription
-//        
-//        let pred = NSPredicate(format: "(todayBoardValue = %@)", todayBoard.text!)
-//        request.predicate = pred
-//        
-//        do {
-//            var results =
-//                try managedObjectContext.fetch(request as!
-//                    NSFetchRequest<NSFetchRequestResult>)
-//            
-//            if results.count > 0 {
-//                let match = results[0] as! NSManagedObject
-//                
-//                todayBoard.text = match.value(forKey: "todayBoardValue") as? String
-//                noteToSelfBoard.text = match.value(forKey: "noteToSelfBoardValue") as? String
-//                status.text = "Matches found: \(results.count)"
-//            } else {
-//                status.text = "No Match"
-//            }
-//            
-//        } catch let error {
-//            status.text = error.localizedDescription
-//        }
-//    }
+    //MARK: Check for dark mode toggle (method)
+    func checkDarkModeSetting() {
+        // Read value of TextField with an identifier "name_preference"
+        let userDefaults = UserDefaults.standard
+        let toggle = userDefaults.string(forKey: "theme_darkmode")
+        print("Toggle = \(toggle)")
+        
+        if toggle == "1" {
+            
+            //MARK: Makes the UI dark and the text white (dark mode).
+            self.view.backgroundColor = UIColor.black
+            
+            todayBoard.backgroundColor = UIColor.darkGray
+            todayBoard.textColor = UIColor.white
+            
+            noteToSelfBoard.backgroundColor = UIColor.darkGray
+            noteToSelfBoard.textColor = UIColor.white
+            
+            logoLabel.textColor = UIColor.white
+            todayLabel.textColor = UIColor.white
+            noteToSelfLabel.textColor = UIColor.white
+            
+            status.textColor = UIColor.white
+            
+        } else {
+            //MARK: Makes the UI light and the text black (light mode).
+            self.view.backgroundColor = UIColor.white
+            
+            todayBoard.backgroundColor = UIColor.white
+            todayBoard.textColor = UIColor.black
+            
+            noteToSelfBoard.backgroundColor = UIColor.white
+            noteToSelfBoard.textColor = UIColor.black
+            
+            logoLabel.textColor = UIColor.black
+            todayLabel.textColor = UIColor.black
+            noteToSelfLabel.textColor = UIColor.black
+            
+            status.textColor = UIColor.black
+        }
+    }
     
     //MARK: Saving core data
     @IBAction func saveBoards(_ sender: Any) {
@@ -139,7 +134,7 @@ class ViewController: UIViewController {
         noteToSelfBoard.text = ""
         status.text = "Cleared."
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

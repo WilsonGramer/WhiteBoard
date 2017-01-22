@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>WhiteBoardCoreData-Watch (Complication).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>WhiteBoardCoreData-Watch (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>WhiteBoardCoreData-Watch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WhiteBoardCoreData.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +33,16 @@
 			<true/>
 		</dict>
 		<key>C8D380421E3446F300973167</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8EA09661E34FFA40090E0F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8EA09931E3501090090E0F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
