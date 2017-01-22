@@ -54,7 +54,7 @@ class ViewController: UIViewController {
             noteToSelfBoard.backgroundColor = UIColor.darkGray
             noteToSelfBoard.textColor = UIColor.white
             
-            logoLabel.textColor = UIColor.white
+            logoLabel.textColor = UIColor.gray
             todayLabel.textColor = UIColor.white
             noteToSelfLabel.textColor = UIColor.white
             
