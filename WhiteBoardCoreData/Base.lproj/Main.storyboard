@@ -96,10 +96,18 @@
                                     <action selector="findBoards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LjB-Xk-cIK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BLACK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsY-QS-8ax">
+                                <rect key="frame" x="70" y="21" width="70" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="darkModeOverlayLabel" destination="nsY-QS-8ax" id="wV1-hd-WWR"/>
                         <outlet property="logoLabel" destination="7vq-4b-4PU" id="zYE-W7-T5V"/>
                         <outlet property="noteToSelfBoard" destination="qt1-Qq-TpU" id="fUQ-26-01E"/>
                         <outlet property="noteToSelfLabel" destination="qD1-qT-4OI" id="U79-OI-37f"/>

@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var noteToSelfLabel: UILabel!
     @IBOutlet weak var logoLabel: UILabel!
+    @IBOutlet weak var darkModeOverlayLabel: UILabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -58,7 +59,7 @@ class ViewController: UIViewController {
             noteToSelfLabel.textColor = UIColor.white
             
             status.textColor = UIColor.white
-            
+            darkModeOverlayLabel.isHidden = false
             todayBoard.keyboardAppearance = UIKeyboardAppearance.dark
             noteToSelfBoard.keyboardAppearance = UIKeyboardAppearance.dark
         } else {
@@ -72,11 +73,12 @@ class ViewController: UIViewController {
             noteToSelfBoard.textColor = UIColor.black
             
             logoLabel.textColor = UIColor.black
+            
             todayLabel.textColor = UIColor.black
             noteToSelfLabel.textColor = UIColor.black
             
             status.textColor = UIColor.black
-            
+            darkModeOverlayLabel.isHidden = true
             todayBoard.keyboardAppearance = UIKeyboardAppearance.light
             noteToSelfBoard.keyboardAppearance = UIKeyboardAppearance.light
         }
