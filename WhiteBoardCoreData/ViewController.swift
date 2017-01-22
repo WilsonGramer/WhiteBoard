@@ -22,10 +22,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadBoards() // Loads core data.
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.UIApplicationWillResignActive, object: nil) // Detects when app enters background.
     }
     
     //MARK: Saving core data
-    @IBAction func saveBoards(_ sender: Any) {
+    func saveBoards() {
         let context = appDelegate.persistentContainer.viewContext
         let boardValues = NSEntityDescription.insertNewObject(forEntityName: "BoardValues", into: context)
         
@@ -42,7 +46,7 @@ class ViewController: UIViewController {
     }
     
     //MARK: Loading core data
-    @IBAction func findBoards(_ sender: Any) {
+    func loadBoards() {
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "BoardValues")
         request.returnsObjectsAsFaults = false
@@ -71,6 +75,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func appMovedToBackground() {
+        saveBoards()
     }
 }
 
