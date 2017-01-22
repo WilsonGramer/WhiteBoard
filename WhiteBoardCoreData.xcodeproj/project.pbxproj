@@ -14,7 +14,6 @@
 		C8D3803A1E3446F300973167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D380391E3446F300973167 /* Assets.xcassets */; };
 		C8D3803D1E3446F300973167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D3803B1E3446F300973167 /* LaunchScreen.storyboard */; };
 		C8D380481E3446F300973167 /* WhiteBoardCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D380471E3446F300973167 /* WhiteBoardCoreDataTests.swift */; };
-		C8D565B31E34E4310020AD66 /* OldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D565B21E34E4310020AD66 /* OldViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 		C8D380431E3446F300973167 /* WhiteBoardCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteBoardCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D380471E3446F300973167 /* WhiteBoardCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoardCoreDataTests.swift; sourceTree = "<group>"; };
 		C8D380491E3446F300973167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8D565B21E34E4310020AD66 /* OldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +81,6 @@
 			children = (
 				C8D3802F1E3446F300973167 /* AppDelegate.swift */,
 				C8D380311E3446F300973167 /* ViewController.swift */,
-				C8D565B21E34E4310020AD66 /* OldViewController.swift */,
 				C8D380331E3446F300973167 /* Main.storyboard */,
 				C8D380391E3446F300973167 /* Assets.xcassets */,
 				C8D3803B1E3446F300973167 /* LaunchScreen.storyboard */,
@@ -207,7 +204,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8D565B31E34E4310020AD66 /* OldViewController.swift in Sources */,
 				C8D380321E3446F300973167 /* ViewController.swift in Sources */,
 				C8D380301E3446F300973167 /* AppDelegate.swift in Sources */,
 				C8D380381E3446F300973167 /* WhiteBoardCoreData.xcdatamodeld in Sources */,
