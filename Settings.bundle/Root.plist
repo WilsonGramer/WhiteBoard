@@ -26,6 +26,12 @@
             <key>Type</key>
             <string>PSGroupSpecifier</string>
             <key>Title</key>
+            <string>These settings will be reflected on app restart.</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSGroupSpecifier</string>
+            <key>Title</key>
             <string></string>
         </dict>
 		<dict>
@@ -36,12 +42,6 @@
 			<key>File</key>
 			<string>License</string>
 		</dict>
-        <dict>
-            <key>Type</key>
-            <string>PSGroupSpecifier</string>
-            <key>Title</key>
-            <string>These settings will be reflected on app restart.</string>
-        </dict>
 	</array>
 </dict>
 </plist>
