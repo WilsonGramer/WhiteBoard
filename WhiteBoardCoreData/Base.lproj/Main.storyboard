@@ -103,12 +103,21 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="{NAME}'s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOo-Ac-O2c">
+                                <rect key="frame" x="70" y="-1" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="darkModeOverlayLabel" destination="nsY-QS-8ax" id="wV1-hd-WWR"/>
+                        <outlet property="imageLogo" destination="p6g-lA-34L" id="wKr-fK-xSg"/>
                         <outlet property="logoLabel" destination="7vq-4b-4PU" id="zYE-W7-T5V"/>
+                        <outlet property="nameLabel" destination="HOo-Ac-O2c" id="uoX-kn-4PY"/>
                         <outlet property="noteToSelfBoard" destination="qt1-Qq-TpU" id="fUQ-26-01E"/>
                         <outlet property="noteToSelfLabel" destination="qD1-qT-4OI" id="U79-OI-37f"/>
                         <outlet property="status" destination="Uua-Ty-HKB" id="rwa-D1-ygm"/>
@@ -118,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115.59220389805098" y="122.40000000000001"/>
+            <point key="canvasLocation" x="-18.440779610194905" y="173.59999999999999"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C83AC65D1E35828700932893 /* Whiteboard-inverted.png in Resources */ = {isa = PBXBuildFile; fileRef = C83AC65C1E35828700932893 /* Whiteboard-inverted.png */; };
+		C87E2FE41E358BC000DCE2D1 /* PIZZA.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C87E2FE31E358BC000DCE2D1 /* PIZZA.jpg */; };
+		C87E2FE81E358E2D00DCE2D1 /* Ian of Ians.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C87E2FE71E358E2D00DCE2D1 /* Ian of Ians.jpg */; };
 		C8AD439F1E34F7CA004ED0D0 /* Whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */; };
 		C8D380301E3446F300973167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3802F1E3446F300973167 /* AppDelegate.swift */; };
 		C8D380321E3446F300973167 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D380311E3446F300973167 /* ViewController.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C83AC65C1E35828700932893 /* Whiteboard-inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Whiteboard-inverted.png"; sourceTree = "<group>"; };
+		C87E2FE31E358BC000DCE2D1 /* PIZZA.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PIZZA.jpg; sourceTree = "<group>"; };
+		C87E2FE71E358E2D00DCE2D1 /* Ian of Ians.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ian of Ians.jpg"; sourceTree = "<group>"; };
 		C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Whiteboard.png; sourceTree = "<group>"; };
 		C8D3802C1E3446F300973167 /* WhiteBoardCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteBoardCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D3802F1E3446F300973167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 				C8D3803B1E3446F300973167 /* LaunchScreen.storyboard */,
 				C8D380391E3446F300973167 /* Assets.xcassets */,
 				C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */,
+				C83AC65C1E35828700932893 /* Whiteboard-inverted.png */,
+				C87E2FE31E358BC000DCE2D1 /* PIZZA.jpg */,
+				C87E2FE71E358E2D00DCE2D1 /* Ian of Ians.jpg */,
 				C8D3803E1E3446F300973167 /* Info.plist */,
 				C8D380361E3446F300973167 /* WhiteBoardCoreData.xcdatamodeld */,
 			);
@@ -219,6 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8EA09C21E3545A80090E0F4 /* License.license in Resources */,
+				C87E2FE41E358BC000DCE2D1 /* PIZZA.jpg in Resources */,
+				C83AC65D1E35828700932893 /* Whiteboard-inverted.png in Resources */,
+				C87E2FE81E358E2D00DCE2D1 /* Ian of Ians.jpg in Resources */,
 				C8D3803D1E3446F300973167 /* LaunchScreen.storyboard in Resources */,
 				C8D3803A1E3446F300973167 /* Assets.xcassets in Resources */,
 				C8EA09BD1E3512940090E0F4 /* Settings.bundle in Resources */,

@@ -22,30 +22,30 @@ print $plistfh <<'EOD';
 EOD
 for my $i (sort glob("*.license"))
 {
-my $value=`cat $i`;
-$value =~ s/\r//g;
-$value =~ s/\n/\r/g;
-$value =~ s/[ \t]+\r/\r/g;
-$value =~ s/\"/\'/g;
-my $key=$i;
-$key =~ s/\.license$//;
-
-my $cnt = 1;
-my $keynum = $key;
-for my $str (split /\r\r/, $value)
-{
-print $plistfh <<"EOD";
-<dict>
-<key>Type</key>
-<string>PSGroupSpecifier</string>
-<key>Title</key>
-<string>$keynum</string>
-</dict>
-EOD
-
-print $outfh "\"$keynum\" = \"$str\";\n";
-$keynum = $key.(++$cnt);
-}
+    my $value=`cat $i`;
+    $value =~ s/\r//g;
+    $value =~ s/\n/\r/g;
+    $value =~ s/[ \t]+\r/\r/g;
+    $value =~ s/\"/\'/g;
+    my $key=$i;
+    $key =~ s/\.license$//;
+    
+    my $cnt = 1;
+    my $keynum = $key;
+    for my $str (split /\r\r/, $value)
+    {
+        print $plistfh <<"EOD";
+        <dict>
+        <key>Type</key>
+        <string>PSGroupSpecifier</string>
+        <key>FooterText</key>
+        <string>$keynum</string>
+        </dict>
+        EOD
+        
+        print $outfh "\"$keynum\" = \"$str\";\n";
+        $keynum = $key.(++$cnt);
+    }
 }
 
 print $plistfh <<'EOD';

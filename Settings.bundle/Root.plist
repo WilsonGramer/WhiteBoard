@@ -10,37 +10,39 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Theme</string>
+			<string>Customize your WhiteBoard</string>
+			<key>FooterText</key>
+			<string>This name is only used inside of the WhiteBoard app and is not sent anywhere else or to the developer, advertisers, etc.</string>
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
+			<string>PSChildPaneSpecifier</string>
 			<key>Title</key>
-			<string>Dark Theme</string>
-			<key>Key</key>
-			<string>theme_darkmode</string>
-			<key>DefaultValue</key>
-			<false/>
+			<string>Themes</string>
+			<key>File</key>
+			<string>Themes</string>
 		</dict>
-        <dict>
-            <key>Type</key>
-            <string>PSGroupSpecifier</string>
-            <key>Title</key>
-            <string>These settings will be reflected on app restart.</string>
-        </dict>
-        <dict>
-            <key>Type</key>
-            <string>PSGroupSpecifier</string>
-            <key>Title</key>
-            <string></string>
-        </dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Name</string>
+			<key>Key</key>
+			<string>name</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 			<key>Title</key>
 			<string>Copyright Information</string>
 			<key>File</key>
-			<string>License</string>
+			<string>Copyright</string>
 		</dict>
 	</array>
 </dict>

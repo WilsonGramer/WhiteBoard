@@ -9,6 +9,23 @@
 import UIKit
 import CoreData
 
+extension UIView {
+    func addBackground() {
+        // screen width and height:
+        let width = UIScreen.main.bounds.size.width
+        let height = UIScreen.main.bounds.size.height
+        
+        let imageViewBackground = UIImageView(frame: CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: width, height: height)))
+        imageViewBackground.image = UIImage(named: "PIZZA.jpg")
+        
+        // you can change the content mode:
+        imageViewBackground.contentMode = UIViewContentMode.scaleAspectFill
+        
+        self.addSubview(imageViewBackground)
+        self.sendSubview(toBack: imageViewBackground)
+    }
+}
+
 class ViewController: UIViewController {
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -20,8 +37,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var noteToSelfLabel: UILabel!
     @IBOutlet weak var logoLabel: UILabel!
     @IBOutlet weak var darkModeOverlayLabel: UILabel!
+    @IBOutlet weak var imageLogo: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    let whiteBoardLogoImage = "Whiteboard.png"
+    let whiteBoardLogoInvertedImage = "Whiteboard-inverted.png"
+    let pizzaImage = "PIZZA.jpg"
+    let ianOfIansImage = "Ian of Ians.jgp"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +58,9 @@ class ViewController: UIViewController {
         
         //MARK: Check for dark mode toggle (call)
         checkDarkModeSetting()
+        
+        //MARK: Set custom name from settings (call)
+        setCustomName()
     }
     
     //MARK: Check for dark mode toggle (method)
@@ -43,10 +70,15 @@ class ViewController: UIViewController {
         let toggle = userDefaults.string(forKey: "theme_darkmode")
         print("Toggle = \(toggle)")
         
+        let whiteBoardLogo = UIImage(named: whiteBoardLogoImage)
+        let whiteBoardLogoInverted = UIImage(named: whiteBoardLogoInvertedImage)
+        
         if toggle == "1" {
             
             //MARK: Makes the UI dark and the text white (dark mode).
             self.view.backgroundColor = UIColor.black
+            
+            imageLogo.image = whiteBoardLogoInverted
             
             todayBoard.backgroundColor = UIColor.darkGray
             todayBoard.textColor = UIColor.white
@@ -55,16 +87,22 @@ class ViewController: UIViewController {
             noteToSelfBoard.textColor = UIColor.white
             
             logoLabel.textColor = UIColor.gray
+            
             todayLabel.textColor = UIColor.white
             noteToSelfLabel.textColor = UIColor.white
+            nameLabel.textColor = UIColor.white
             
             status.textColor = UIColor.white
             darkModeOverlayLabel.isHidden = false
             todayBoard.keyboardAppearance = UIKeyboardAppearance.dark
             noteToSelfBoard.keyboardAppearance = UIKeyboardAppearance.dark
+            
         } else {
+            
             //MARK: Makes the UI light and the text black (light mode).
             self.view.backgroundColor = UIColor.white
+            
+            imageLogo.image = whiteBoardLogo
             
             todayBoard.backgroundColor = UIColor.white
             todayBoard.textColor = UIColor.black
@@ -76,11 +114,32 @@ class ViewController: UIViewController {
             
             todayLabel.textColor = UIColor.black
             noteToSelfLabel.textColor = UIColor.black
+            nameLabel.textColor = UIColor.black
             
             status.textColor = UIColor.black
             darkModeOverlayLabel.isHidden = true
             todayBoard.keyboardAppearance = UIKeyboardAppearance.light
             noteToSelfBoard.keyboardAppearance = UIKeyboardAppearance.light
+            
+        }
+    }
+    
+    //MARK: Set custom name from settings (method)
+    func setCustomName() {
+        // Read value of TextField with an identifier "name_preference"
+        let userDefaults = UserDefaults.standard
+        let name = userDefaults.string(forKey: "name")
+        print("Custom Name = \(name)")
+        
+        if name == "" {
+            nameLabel.text = ""
+        } else if name == "pizzaficati0n" {
+            let ianOfIans = UIImage(named: ianOfIansImage)
+            nameLabel.text = "GOOD DAY SIR."
+            imageLogo.image = ianOfIans
+            self.view.addBackground()
+        } else {
+            nameLabel.text = "\(name ?? "")'s"
         }
     }
     
