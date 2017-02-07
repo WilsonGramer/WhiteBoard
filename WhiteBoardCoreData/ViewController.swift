@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Darwin
 
 extension UIView {
     func addBackground() {
@@ -26,6 +27,12 @@ extension UIView {
     }
 }
 
+extension CGRect {
+    var wh: (w: CGFloat, h: CGFloat) {
+        return (size.width, size.height)
+    }
+}
+
 class ViewController: UIViewController {
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -41,11 +48,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let userDefaults = UserDefaults.standard
     
     let whiteBoardLogoImage = "Whiteboard.png"
     let whiteBoardLogoInvertedImage = "Whiteboard-inverted.png"
     let pizzaImage = "PIZZA.jpg"
-    let ianOfIansImage = "Ian of Ians.jgp"
+    let ianOfIansImage = "Ian of Ians.jpg"
+    
+    let (cgWidth, cgHeight) = UIScreen.main.applicationFrame.wh
+    var width: Int = 0
+    var height: Int = 0
+    
+    var firstTimeLaunch: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +75,29 @@ class ViewController: UIViewController {
         
         //MARK: Set custom name from settings (call)
         setCustomName()
+        
+        //MARK: Check first-time launch and change settings
+        firstTimeLaunch = checkFirstLaunch()
+        
+        if firstTimeLaunch == true {
+            //self.dismiss(animated: true, completion: nil); print("dismissed boardsView.")
+            //let vc = self.storyboard?.instantiateViewController(withIdentifier: "firstTimeLaunchScreen")
+            //self.navigationController?.present(vc!, animated: true, completion: nil); print("switched to the view.")
+            status.text = "First-time setup, restarting in 5..."
+            
+            userDefaults.setValue("Note To Self", forKey: "ntsname")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+                UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil) // Closes the app gracefully after 5 seconds
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                exit(0)
+            })
+        }
+        
+        width = Int(cgWidth)
+        height = Int(cgHeight)
+        print("The width is \(width) and the height is \(height).")
     }
     
     //MARK: Check for dark mode toggle (method)
@@ -127,20 +164,26 @@ class ViewController: UIViewController {
     //MARK: Set custom name from settings (method)
     func setCustomName() {
         // Read value of TextField with an identifier "name_preference"
-        let userDefaults = UserDefaults.standard
-        let name = userDefaults.string(forKey: "name")
-        print("Custom Name = \(name)")
+        var name = userDefaults.string(forKey: "name")
+        print("Custom Name = \(String(describing: name))")
+        
+        name = name ?? ""
         
         if name == "" {
             nameLabel.text = ""
-        } else if name == "pizzaficati0n" {
+        } else {
+            nameLabel.text = "\(name ?? "error")'s"
+        }
+            
+        if name == "pizzaficati0n" {
             let ianOfIans = UIImage(named: ianOfIansImage)
             nameLabel.text = "GOOD DAY SIR."
             imageLogo.image = ianOfIans
             self.view.addBackground()
-        } else {
-            nameLabel.text = "\(name ?? "")'s"
         }
+        
+        let ntsname = userDefaults.string(forKey: "ntsname")
+        noteToSelfLabel.text = ntsname
     }
     
     //MARK: Saving core data
@@ -199,6 +242,18 @@ class ViewController: UIViewController {
         todayBoard.text = ""
         noteToSelfBoard.text = ""
         status.text = "Cleared."
+    }
+    
+    func checkFirstLaunch() -> Bool {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            print("Not first launch.")
+            return false
+        } else {
+            print("First launch, setting UserDefault.")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            return true
+        }
     }
     
     override func didReceiveMemoryWarning() {

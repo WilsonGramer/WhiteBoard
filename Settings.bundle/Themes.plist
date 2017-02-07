@@ -11,8 +11,6 @@
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string>Theme</string>
-			<key>FooterText</key>
-			<string>These settings will be reflected on app restart.</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -23,6 +21,30 @@
 			<string>theme_darkmode</string>
 			<key>DefaultValue</key>
 			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string></string>
+			<key>FooterText</key>
+			<string>This is the name of the second board in WhiteBoard. By default it is &apos;Note To Self&apos;.</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Custom Board Name</string>
+			<key>Key</key>
+			<string>ntsname</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string></string>
+			<key>FooterText</key>
+			<string>These settings will be reflected on app restart.</string>
 		</dict>
 	</array>
 </dict>
