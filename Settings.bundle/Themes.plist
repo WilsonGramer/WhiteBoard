@@ -11,14 +11,72 @@
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string>Theme</string>
+			<key>FooterText</key>
+			<string>Change how WhiteBoard looks. The theme does not have to be the same as the app icon.</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Theme</string>
+			<key>Key</key>
+			<string>theme</string>
+			<key>DefaultValue</key>
+			<string>white</string>
+			<key>Titles</key>
+			<array>
+				<string>Classic</string>
+				<string>Dark</string>
+				<string>Peach</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>white</string>
+				<string>dark</string>
+				<string>peach</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>App Icon</string>
+			<key>Key</key>
+			<string>appIconSetting</string>
+			<key>DefaultValue</key>
+			<string>white</string>
+			<key>Titles</key>
+			<array>
+				<string>Classic</string>
+				<string>Dark</string>
+				<string>Rainbow</string>
+				<string>Text</string>
+				<string>Text Dark</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>white</string>
+				<string>dark</string>
+				<string>rainbow</string>
+				<string>text</string>
+				<string>textdark</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string></string>
+			<key>FooterText</key>
+			<string>If enabled, the Dark theme will be automatically enabled at 6 PM and disabled at 7 AM. This setting overrides the current theme setting.</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Dark Theme</string>
+			<string>Auto Dark Theme</string>
 			<key>Key</key>
-			<string>theme_darkmode</string>
+			<string>autodarkmode</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -28,7 +86,7 @@
 			<key>Title</key>
 			<string></string>
 			<key>FooterText</key>
-			<string>This is the name of the second board in WhiteBoard. By default it is &apos;Note To Self&apos;.</string>
+			<string>This is the name of the second board in WhiteBoard. By default it is &apos;Note to Self&apos;.</string>
 		</dict>
 		<dict>
 			<key>Type</key>

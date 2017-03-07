@@ -40,9 +40,9 @@
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 			<key>Title</key>
-			<string>Copyright Information</string>
+			<string>Help and Information</string>
 			<key>File</key>
-			<string>Copyright</string>
+			<string>Help</string>
 		</dict>
 	</array>
 </dict>
