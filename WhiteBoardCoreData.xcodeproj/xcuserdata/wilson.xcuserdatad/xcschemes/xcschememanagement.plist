@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ShareExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>WatchApp (Complication).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>WatchApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>WhiteBoard-Watch (Complication).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -42,6 +57,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C807A4E31EA7EB50002D8784</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C807A4FE1EA7FE68002D8784</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C872AF651E4A79E80080FC6D</key>
 		<dict>
 			<key>primary</key>

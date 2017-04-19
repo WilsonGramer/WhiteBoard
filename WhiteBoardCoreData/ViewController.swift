@@ -79,7 +79,7 @@ public extension UIDevice {
 
 //MARK: Extra colors for themes.
 extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
+    convenience init(_ red: Int, _ green: Int, _ blue: Int) {
         let newRed = CGFloat(red)/255
         let newGreen = CGFloat(green)/255
         let newBlue = CGFloat(blue)/255
@@ -117,15 +117,21 @@ class ViewController: UIViewController {
     var firstTimeLaunch: Bool = true
     
     //MARK: Colors
-    let c_peachLight = UIColor(red: 248, green: 200, blue: 165)
-    let c_peachDark = UIColor(red: 241, green: 123, blue: 105)
-    let c_lightBlue = UIColor(red: 182, green: 219, blue: 247)
-    let c_navyBlue = UIColor(red: 4, green: 27, blue: 56)
+    // Peach theme
+    let c_peachLight = UIColor(248, 200, 165)
+    let c_peachDark = UIColor(241, 123, 105)
+    let c_lightBlue = UIColor(182, 219, 247)
+    let c_navyBlue = UIColor(4, 27, 56)
+    
+    // Space Theme
+    let c_spaceNavy = UIColor(29, 21, 70)
+    let c_space = UIColor(9, 8, 30)
+    let c_spaceLavender = UIColor(140, 113, 206)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK; Load keyboard
+        //MARK: Load keyboard
         todayBoard.becomeFirstResponder()
         
         //MARK: Auto load core data
@@ -143,7 +149,7 @@ class ViewController: UIViewController {
         if firstTimeLaunch == true {
             //self.dismiss(animated: true, completion: nil); print("dismissed boardsView.")
             //let vc = self.storyboard?.instantiateViewController(withIdentifier: "firstTimeLaunchScreen")
-            //self.navigationController?.present(vc!, animated: true, completion: nil); print("switched to the view.")
+            //self.navigationController?.present(vc!, animated: true, coma  pletion: nil); print("switched to the view.")
             status.text = "First-time setup, restarting..."
             
             userDefaults.setValue("Note to Self", forKey: "ntsname")
@@ -176,6 +182,9 @@ class ViewController: UIViewController {
         }
         
         setAlternateIcon()
+        
+        //MARK: Check if app launched because of ShareExtension. If so loads data
+        checkForShareExtension()
     }
     
     //MARK: Check for dark mode toggle (method)
@@ -198,6 +207,9 @@ class ViewController: UIViewController {
         case "peach"?:
             //MARK: Sets 'peach' theme.
             setTheme(bgColor: c_peachDark, logoImage: whiteBoardLogo!, boardColor: c_peachLight, boardText: c_navyBlue, logoText: c_navyBlue, boardLabel: c_navyBlue, nameColor: c_navyBlue, statusText: c_navyBlue, isDarkModeOverlayShown: false, keyboard: .light)
+        case "space"?:
+            //MARK: Sets 'space' theme.
+            setTheme(bgColor: c_space, logoImage: whiteBoardLogo!, boardColor: c_spaceNavy, boardText: .white, logoText: .white, boardLabel: c_spaceLavender, nameColor: c_spaceLavender, statusText: c_spaceLavender, isDarkModeOverlayShown: false, keyboard: .dark)
         default:
             //MARK: Default option - light mode.
             setTheme(bgColor: .white, logoImage: whiteBoardLogo!, boardColor: .white, boardText: .black, logoText: .black, boardLabel: .black, nameColor: .black, statusText: .black, isDarkModeOverlayShown: false, keyboard: .light)
@@ -249,7 +261,7 @@ class ViewController: UIViewController {
     
     //MARK: Saving core data
     @IBAction func saveBoards(_ sender: Any) {
-        let context = appDelegate.persistentContainer.viewContext
+        /*let context = appDelegate.persistentContainer.viewContext
         let boardValues = NSEntityDescription.insertNewObject(forEntityName: "BoardValues", into: context)
         
         boardValues.setValue(todayBoard.text, forKey: "todayBoardValue")
@@ -261,7 +273,13 @@ class ViewController: UIViewController {
         } catch {
             // Error handling
             print("error while saving.")
-        }
+        }*/
+        
+        
+        // UserDefaults!! Much simpler this way
+        UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.set(todayBoard.text, forKey: "todayBoardValue")
+        UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.set(noteToSelfBoard.text, forKey: "noteToSelfBoardValue")
+        status.text = "Successfully saved boards."
         
         //setAlternateIcon()
     }
@@ -272,7 +290,7 @@ class ViewController: UIViewController {
     }
     
     func loadCoreData() {
-        let context = appDelegate.persistentContainer.viewContext
+        /*let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "BoardValues")
         request.returnsObjectsAsFaults = false
         
@@ -297,7 +315,12 @@ class ViewController: UIViewController {
             // Error handling
             print("error while loading.")
             status.text = "error while loading."
-        }
+        }*/
+        
+        // UserDefaults!! Much simpler this way
+        todayBoard.text = UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.string(forKey: "todayBoardValue")
+        noteToSelfBoard.text = UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.string(forKey: "noteToSelfBoardValue")
+        status.text = "Successfully loaded boards."
     }
     
     //MARK: Clears the boards.
@@ -412,6 +435,23 @@ class ViewController: UIViewController {
         if date24 <= 7  { return true  }
         
         return false
+    }
+    
+    func appendToTodayBoard(_ stringToAppend: String) {
+        todayBoard.text = "\(todayBoard.text + stringToAppend)"
+    }
+    
+    func appendToNTSBoard(_ stringToAppend: String) {
+        noteToSelfBoard.text = "\(noteToSelfBoard.text + stringToAppend)"
+    }
+    
+    func checkForShareExtension() {
+        if UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.string(forKey: "shareText")! != "" {
+            noteToSelfBoard.text = noteToSelfBoard.text + "\n" + UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.string(forKey: "shareText")!
+            saveBoards(Any)
+            status.text = "Loaded shared item."
+            UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.set("", forKey: "shareText")
+        }
     }
     
 }

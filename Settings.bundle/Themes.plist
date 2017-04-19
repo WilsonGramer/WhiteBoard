@@ -28,12 +28,14 @@
 				<string>Classic</string>
 				<string>Dark</string>
 				<string>Peach</string>
+				<string>Space</string>
 			</array>
 			<key>Values</key>
 			<array>
 				<string>white</string>
 				<string>dark</string>
 				<string>peach</string>
+				<string>space</string>
 			</array>
 		</dict>
 		<dict>
