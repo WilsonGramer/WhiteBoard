@@ -10,6 +10,24 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
+			<string></string>
+			<key>FooterText</key>
+			<string>The next time you open WhiteBoard, Safe Mode resets your Boards and sets the theme to Classic. Use this if your WhiteBoard won&apos;t open after sharing an unsupported item to it.</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Safe Mode</string>
+			<key>Key</key>
+			<string>safemode</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
 			<string>Customize your WhiteBoard</string>
 			<key>FooterText</key>
 			<string>This name is only used inside of the WhiteBoard app and is not sent anywhere else or to the developer, advertisers, etc.</string>

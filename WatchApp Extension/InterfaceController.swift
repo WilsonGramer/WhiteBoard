@@ -14,6 +14,9 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var todayBoard: WKInterfaceLabel!
     @IBOutlet var noteToSelfBoard: WKInterfaceLabel!
     
+    // UserDefaults for app group
+    var appGroup = UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -25,8 +28,15 @@ class InterfaceController: WKInterfaceController {
         super.willActivate()
         
         // UserDefaults!! Much simpler this way
-        todayBoard.setText(UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.string(forKey: "todayBoardValue"))
-        noteToSelfBoard.setText(UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.string(forKey: "noteToSelfBoardValue"))
+        var todayBoardText = appGroup?.string(forKey: "todayBoardValue")
+        var noteToSelfBoardText = appGroup?.string(forKey: "noteToSelfBoardValue")
+        
+        print("Today text is: \(todayBoardText)")
+        print("NTS text is: \(noteToSelfBoardText)")
+        
+        // Set labels
+        self.todayBoard.setText(todayBoardText)
+        self.noteToSelfBoard.setText(noteToSelfBoardText)
         
     }
     

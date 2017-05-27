@@ -10,6 +10,9 @@ import UIKit
 import Social
 
 class ShareViewController: SLComposeServiceViewController {
+    
+    // UserDefaults for app group
+    var appGroup = UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")
 
     override func isContentValid() -> Bool {
         // Do validation of contentText and/or NSExtensionContext attachments here
@@ -20,7 +23,7 @@ class ShareViewController: SLComposeServiceViewController {
         print("Shared \"\(contentText)\" to WhiteBoard.")
         
         // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
-        UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.set(contentText, forKey: "shareText")
+        appGroup?.set(contentText, forKey: "shareText")
         // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
     }

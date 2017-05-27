@@ -128,8 +128,20 @@ class ViewController: UIViewController {
     let c_space = UIColor(9, 8, 30)
     let c_spaceLavender = UIColor(140, 113, 206)
     
+    // UserDefaults for app group
+    var appGroup = UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")
+    
+    var safeModeActivatedThisRun = false
+    
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        checkSafeMode()
         
         //MARK: Load keyboard
         todayBoard.becomeFirstResponder()
@@ -181,7 +193,9 @@ class ViewController: UIViewController {
                 print("Error while finding device model name or resizing display - maybe running on an unsupported device?")
         }
         
-        setAlternateIcon()
+        delay(0.01) {
+            self.setAlternateIcon()
+        }
         
         //MARK: Check if app launched because of ShareExtension. If so loads data
         checkForShareExtension()
@@ -277,8 +291,9 @@ class ViewController: UIViewController {
         
         
         // UserDefaults!! Much simpler this way
-        UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.set(todayBoard.text, forKey: "todayBoardValue")
-        UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.set(noteToSelfBoard.text, forKey: "noteToSelfBoardValue")
+        appGroup?.set(todayBoard.text, forKey: "todayBoardValue")
+        appGroup?.set(noteToSelfBoard.text, forKey: "noteToSelfBoardValue")
+        appGroup?.synchronize()
         status.text = "Successfully saved boards."
         
         //setAlternateIcon()
@@ -318,9 +333,13 @@ class ViewController: UIViewController {
         }*/
         
         // UserDefaults!! Much simpler this way
-        todayBoard.text = UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.string(forKey: "todayBoardValue")
-        noteToSelfBoard.text = UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.string(forKey: "noteToSelfBoardValue")
-        status.text = "Successfully loaded boards."
+        todayBoard.text = appGroup?.string(forKey: "todayBoardValue")
+        noteToSelfBoard.text = appGroup?.string(forKey: "noteToSelfBoardValue")
+        if safeModeActivatedThisRun {
+            status.text = "Successfully reset."
+        } else {
+            status.text = "Successfully loaded boards."
+        }
     }
     
     //MARK: Clears the boards.
@@ -352,29 +371,50 @@ class ViewController: UIViewController {
         let iconSetting = userDefaults.string(forKey: "appIconSetting")
         print("The icon setting is: \(iconSetting ?? "error getting appIconSetting.")")
         
+        if UIApplication.shared.supportsAlternateIcons {
+            print("you can change this app's icon")
+        } else {
+            print("you cannot change this app's icon")
+            return
+        }
+        
+        var iconSuccess = false
         switch iconSetting! {
-        case "white":
-            specifyIcon(nil)
-        case "dark":
-            specifyIcon("dark")
-        case "text":
-            specifyIcon("text")
-        case "textdark":
-            specifyIcon("textdark")
-        case "rainbow":
-            specifyIcon("rainbow")
-        default:
-            specifyIcon(nil)
-            print("ERROR setting icon.")
+            case "white":
+                iconSuccess = specifyIcon(nil)
+            case "dark":
+                iconSuccess = specifyIcon("dark")
+            case "text":
+                iconSuccess = specifyIcon("text")
+            case "textdark":
+                iconSuccess = specifyIcon("textdark")
+            case "rainbow":
+                iconSuccess = specifyIcon("rainbow")
+            default:
+                specifyIcon(nil)
+                print("ERROR setting icon -- somehow got 'default' in the switch!")
+        }
+        if iconSuccess {
+            print("Successful in changing icon.")
+        } else {
+            print("Did not change icon -- icon was already the one last used.")
         }
     }
     
-    func specifyIcon(_ icon: String?) {
-        UIApplication.shared.setAlternateIconName(icon) { (error) in
-            if let error = error {
-                print("err: \(error)")
-                // icon probably wasn't defined in plist file, handle the error
+    func specifyIcon(_ icon: String?) -> Bool {
+        let lastUsedIconSetting = userDefaults.string(forKey: "lastUsedIconSetting")
+        if lastUsedIconSetting == icon {
+            return false
+        } else {
+            UIApplication.shared.setAlternateIconName(icon) { error in
+                if let error = error {
+                    print("Error setting icon: " + error.localizedDescription)
+                } else {
+                    print("Success!")
+                }
             }
+            userDefaults.set(icon, forKey: "lastUsedIconSetting")
+            return true
         }
     }
     
@@ -446,13 +486,29 @@ class ViewController: UIViewController {
     }
     
     func checkForShareExtension() {
-        if UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.string(forKey: "shareText")! != "" {
+        /*if appGroup?.string(forKey: "shareText")! != "" {
             noteToSelfBoard.text = noteToSelfBoard.text + "\n" + UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.string(forKey: "shareText")!
             saveBoards(Any)
             status.text = "Loaded shared item."
             UserDefaults(suiteName: "group.co.neef.ios.WhiteBoardGroup")!.set("", forKey: "shareText")
-        }
+        }*/
     }
     
+    func checkSafeMode() -> Bool {
+        let safeMode = UserDefaults.standard.string(forKey: "safemode")
+        if safeMode == "1" {
+            print("Enabling safe mode!")
+            UserDefaults.standard.set(false, forKey: "safemode")
+            UserDefaults.standard.set("white", forKey: "theme")
+            // UserDefaults!! Much simpler this way
+            appGroup?.set("", forKey: "todayBoardValue")
+            appGroup?.set("", forKey: "noteToSelfBoardValue")
+            //TODO: Reset share defaults
+            appGroup?.synchronize()
+            safeModeActivatedThisRun = true;
+            return true
+        }
+        return false
+    }
 }
 
