@@ -112,7 +112,7 @@
 		C807A4E61EA7EB51002D8784 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		C807A4E91EA7EB51002D8784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C807A4EB1EA7EB51002D8784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C807A4F31EA7EE34002D8784 /* WhiteBoardCoreData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = WhiteBoardCoreData.entitlements; path = WhiteBoardCoreData/WhiteBoardCoreData.entitlements; sourceTree = "<group>"; };
+		C807A4F31EA7EE34002D8784 /* WhiteBoardCoreData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = WhiteBoardCoreData.entitlements; path = "WhiteBoardCoreData/Core Files/WhiteBoardCoreData.entitlements"; sourceTree = "<group>"; };
 		C807A4F41EA7EE88002D8784 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		C807A4FF1EA7FE68002D8784 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C807A5021EA7FE68002D8784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -126,30 +126,30 @@
 		C807A5181EA7FE69002D8784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C807A5231EA7FE70002D8784 /* WatchApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchApp.entitlements; sourceTree = "<group>"; };
 		C807A5241EA7FE75002D8784 /* WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchApp Extension.entitlements"; sourceTree = "<group>"; };
-		C81F854B1E4B58DE0060273F /* ic_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_custom.png; sourceTree = "<group>"; };
-		C83AC65C1E35828700932893 /* Whiteboard-inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Whiteboard-inverted.png"; path = "../WhiteBoardCoreData/Whiteboard-inverted.png"; sourceTree = "<group>"; };
-		C84D4A351E4AA84300D14153 /* ic_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_text.png; sourceTree = "<group>"; };
-		C84D4A371E4AA8CD00D14153 /* ic_textdark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_textdark.png; sourceTree = "<group>"; };
-		C84D4A391E4AA90400D14153 /* ic_rainbow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_rainbow.png; sourceTree = "<group>"; };
-		C84D4A3B1E4AA95A00D14153 /* ic_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_white.png; sourceTree = "<group>"; };
-		C84D4A3D1E4AA9F400D14153 /* ic_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dark.png; sourceTree = "<group>"; };
-		C87E2FE31E358BC000DCE2D1 /* PIZZA.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = PIZZA.jpg; path = WhiteBoardCoreData/PIZZA.jpg; sourceTree = "<group>"; };
-		C87E2FE71E358E2D00DCE2D1 /* Ian of Ians.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Ian of Ians.jpg"; path = "WhiteBoardCoreData/Ian of Ians.jpg"; sourceTree = "<group>"; };
-		C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Whiteboard.png; path = WhiteBoardCoreData/Whiteboard.png; sourceTree = "<group>"; };
+		C81F854B1E4B58DE0060273F /* ic_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_custom.png; path = WhiteBoardCoreData/Resources/ic_custom.png; sourceTree = "<group>"; };
+		C83AC65C1E35828700932893 /* Whiteboard-inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Whiteboard-inverted.png"; path = "../WhiteBoardCoreData/Resources/Whiteboard-inverted.png"; sourceTree = "<group>"; };
+		C84D4A351E4AA84300D14153 /* ic_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_text.png; path = WhiteBoardCoreData/Resources/ic_text.png; sourceTree = "<group>"; };
+		C84D4A371E4AA8CD00D14153 /* ic_textdark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_textdark.png; path = WhiteBoardCoreData/Resources/ic_textdark.png; sourceTree = "<group>"; };
+		C84D4A391E4AA90400D14153 /* ic_rainbow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_rainbow.png; path = WhiteBoardCoreData/Resources/ic_rainbow.png; sourceTree = "<group>"; };
+		C84D4A3B1E4AA95A00D14153 /* ic_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_white.png; path = WhiteBoardCoreData/Resources/ic_white.png; sourceTree = "<group>"; };
+		C84D4A3D1E4AA9F400D14153 /* ic_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_dark.png; path = WhiteBoardCoreData/Resources/ic_dark.png; sourceTree = "<group>"; };
+		C87E2FE31E358BC000DCE2D1 /* PIZZA.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = PIZZA.jpg; path = WhiteBoardCoreData/Resources/PIZZA.jpg; sourceTree = "<group>"; };
+		C87E2FE71E358E2D00DCE2D1 /* Ian of Ians.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Ian of Ians.jpg"; path = "WhiteBoardCoreData/Resources/Ian of Ians.jpg"; sourceTree = "<group>"; };
+		C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Whiteboard.png; path = WhiteBoardCoreData/Resources/Whiteboard.png; sourceTree = "<group>"; };
 		C8D3802C1E3446F300973167 /* WhiteBoardCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteBoardCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8D3802F1E3446F300973167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = WhiteBoardCoreData/AppDelegate.swift; sourceTree = "<group>"; };
-		C8D380311E3446F300973167 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = WhiteBoardCoreData/ViewController.swift; sourceTree = "<group>"; };
+		C8D3802F1E3446F300973167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "WhiteBoardCoreData/Core Files/AppDelegate.swift"; sourceTree = "<group>"; };
+		C8D380311E3446F300973167 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "WhiteBoardCoreData/Core Files/ViewController.swift"; sourceTree = "<group>"; };
 		C8D380341E3446F300973167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8D380371E3446F300973167 /* WhiteBoardCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhiteBoardCoreData.xcdatamodel; sourceTree = "<group>"; };
-		C8D380391E3446F300973167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = WhiteBoardCoreData/Assets.xcassets; sourceTree = "<group>"; };
+		C8D380391E3446F300973167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = WhiteBoardCoreData/Resources/Assets.xcassets; sourceTree = "<group>"; };
 		C8D3803C1E3446F300973167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C8D3803E1E3446F300973167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = WhiteBoardCoreData/Info.plist; sourceTree = "<group>"; };
+		C8D3803E1E3446F300973167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "WhiteBoardCoreData/Core Files/Info.plist"; sourceTree = "<group>"; };
 		C8D380431E3446F300973167 /* WhiteBoardCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteBoardCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D380471E3446F300973167 /* WhiteBoardCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoardCoreDataTests.swift; sourceTree = "<group>"; };
 		C8D380491E3446F300973167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8EA09BC1E3512940090E0F4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		C8EA09BF1E3544FF0090E0F4 /* script.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = script.pl; sourceTree = "<group>"; };
-		C8EA09C11E3545A80090E0F4 /* License.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.license; sourceTree = "<group>"; };
+		C8EA09BF1E3544FF0090E0F4 /* script.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = script.pl; path = WhiteBoardCoreData/Resources/script.pl; sourceTree = "<group>"; };
+		C8EA09C11E3545A80090E0F4 /* License.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.license; path = WhiteBoardCoreData/Resources/License.license; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -625,7 +625,7 @@
 				C8D380341E3446F300973167 /* Base */,
 			);
 			name = Main.storyboard;
-			path = WhiteBoardCoreData;
+			path = "WhiteBoardCoreData/Core Files";
 			sourceTree = "<group>";
 		};
 		C8D3803B1E3446F300973167 /* LaunchScreen.storyboard */ = {
@@ -634,7 +634,7 @@
 				C8D3803C1E3446F300973167 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = WhiteBoardCoreData;
+			path = "WhiteBoardCoreData/Core Files";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
