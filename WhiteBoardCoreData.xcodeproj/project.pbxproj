@@ -28,6 +28,9 @@
 		C87E2FE41E358BC000DCE2D1 /* PIZZA.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C87E2FE31E358BC000DCE2D1 /* PIZZA.jpg */; };
 		C87E2FE81E358E2D00DCE2D1 /* Ian of Ians.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C87E2FE71E358E2D00DCE2D1 /* Ian of Ians.jpg */; };
 		C8AD439F1E34F7CA004ED0D0 /* Whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */; };
+		C8B178D41EED79A200324E57 /* Whiteboard-inverted.png in Resources */ = {isa = PBXBuildFile; fileRef = C83AC65C1E35828700932893 /* Whiteboard-inverted.png */; };
+		C8B178D71EED7B7800324E57 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B178D61EED7B7000324E57 /* WatchConnectivity.framework */; };
+		C8B178D91EED7B8900324E57 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B178D81EED7B8400324E57 /* WatchConnectivity.framework */; };
 		C8D380301E3446F300973167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3802F1E3446F300973167 /* AppDelegate.swift */; };
 		C8D380321E3446F300973167 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D380311E3446F300973167 /* ViewController.swift */; };
 		C8D380351E3446F300973167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D380331E3446F300973167 /* Main.storyboard */; };
@@ -112,7 +115,6 @@
 		C807A4E61EA7EB51002D8784 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		C807A4E91EA7EB51002D8784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C807A4EB1EA7EB51002D8784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C807A4F31EA7EE34002D8784 /* WhiteBoardCoreData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = WhiteBoardCoreData.entitlements; path = "WhiteBoardCoreData/Core Files/WhiteBoardCoreData.entitlements"; sourceTree = "<group>"; };
 		C807A4F41EA7EE88002D8784 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		C807A4FF1EA7FE68002D8784 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C807A5021EA7FE68002D8784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -125,8 +127,9 @@
 		C807A5161EA7FE69002D8784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C807A5181EA7FE69002D8784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C807A5231EA7FE70002D8784 /* WatchApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchApp.entitlements; sourceTree = "<group>"; };
-		C807A5241EA7FE75002D8784 /* WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchApp Extension.entitlements"; sourceTree = "<group>"; };
 		C81F854B1E4B58DE0060273F /* ic_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_custom.png; path = WhiteBoardCoreData/Resources/ic_custom.png; sourceTree = "<group>"; };
+		C82AD0121EEDA50100E61777 /* WhiteBoardCoreData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhiteBoardCoreData.entitlements; sourceTree = "<group>"; };
+		C82AD0131EEDA51C00E61777 /* WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchApp Extension.entitlements"; sourceTree = "<group>"; };
 		C83AC65C1E35828700932893 /* Whiteboard-inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Whiteboard-inverted.png"; path = "../WhiteBoardCoreData/Resources/Whiteboard-inverted.png"; sourceTree = "<group>"; };
 		C84D4A351E4AA84300D14153 /* ic_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_text.png; path = WhiteBoardCoreData/Resources/ic_text.png; sourceTree = "<group>"; };
 		C84D4A371E4AA8CD00D14153 /* ic_textdark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_textdark.png; path = WhiteBoardCoreData/Resources/ic_textdark.png; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 		C87E2FE31E358BC000DCE2D1 /* PIZZA.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = PIZZA.jpg; path = WhiteBoardCoreData/Resources/PIZZA.jpg; sourceTree = "<group>"; };
 		C87E2FE71E358E2D00DCE2D1 /* Ian of Ians.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Ian of Ians.jpg"; path = "WhiteBoardCoreData/Resources/Ian of Ians.jpg"; sourceTree = "<group>"; };
 		C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Whiteboard.png; path = WhiteBoardCoreData/Resources/Whiteboard.png; sourceTree = "<group>"; };
+		C8B178D61EED7B7000324E57 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		C8B178D81EED7B8400324E57 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		C8D3802C1E3446F300973167 /* WhiteBoardCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteBoardCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D3802F1E3446F300973167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "WhiteBoardCoreData/Core Files/AppDelegate.swift"; sourceTree = "<group>"; };
 		C8D380311E3446F300973167 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "WhiteBoardCoreData/Core Files/ViewController.swift"; sourceTree = "<group>"; };
@@ -164,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B178D91EED7B8900324E57 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B178D71EED7B7800324E57 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +217,7 @@
 		C807A50F1EA7FE68002D8784 /* WatchApp Extension */ = {
 			isa = PBXGroup;
 			children = (
-				C807A5241EA7FE75002D8784 /* WatchApp Extension.entitlements */,
+				C82AD0131EEDA51C00E61777 /* WatchApp Extension.entitlements */,
 				C807A5101EA7FE69002D8784 /* InterfaceController.swift */,
 				C807A5121EA7FE69002D8784 /* ExtensionDelegate.swift */,
 				C807A5141EA7FE69002D8784 /* ComplicationController.swift */,
@@ -247,10 +254,18 @@
 				C8D380331E3446F300973167 /* Main.storyboard */,
 				C8D3803B1E3446F300973167 /* LaunchScreen.storyboard */,
 				C8D3803E1E3446F300973167 /* Info.plist */,
-				C807A4F31EA7EE34002D8784 /* WhiteBoardCoreData.entitlements */,
 			);
 			name = "Core Files";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C8B178D51EED7B7000324E57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8B178D81EED7B8400324E57 /* WatchConnectivity.framework */,
+				C8B178D61EED7B7000324E57 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C8D380231E3446F300973167 = {
@@ -264,6 +279,7 @@
 				C807A5001EA7FE68002D8784 /* WatchApp */,
 				C807A50F1EA7FE68002D8784 /* WatchApp Extension */,
 				C8D3802D1E3446F300973167 /* Products */,
+				C8B178D51EED7B7000324E57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,6 +298,7 @@
 		C8D3802E1E3446F300973167 /* WhiteBoardCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				C82AD0121EEDA50100E61777 /* WhiteBoardCoreData.entitlements */,
 				C876F04C1E5E4ABB00E669F8 /* Core Files */,
 				C82BB6CD1E4A6568003F5F02 /* Resources */,
 			);
@@ -495,6 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B178D41EED79A200324E57 /* Whiteboard-inverted.png in Resources */,
 				C807A5051EA7FE68002D8784 /* Assets.xcassets in Resources */,
 				C807A5031EA7FE68002D8784 /* Interface.storyboard in Resources */,
 			);

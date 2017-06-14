@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13034"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -19,16 +19,16 @@
                         </label>
                         <separator alignment="left" id="SeU-eh-n6d"/>
                         <label alignment="left" text="Today" id="IQF-Po-NTX"/>
-                        <label width="136" height="104" alignment="left" numberOfLines="8" id="Lv2-in-L99">
-                            <fontDescription key="font" type="system" pointSize="11"/>
+                        <label width="136" height="104" alignment="left" textAlignment="left" numberOfLines="8" id="Lv2-in-L99">
+                            <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
                         <separator alignment="left" id="8oo-YQ-3Pl"/>
                         <label alignment="left" text="Note to Self" id="dRN-d2-mxZ"/>
-                        <label width="136" height="104" alignment="left" numberOfLines="8" id="Bj3-NL-wcY">
-                            <fontDescription key="font" type="system" pointSize="11"/>
+                        <label width="136" height="104" alignment="left" textAlignment="left" numberOfLines="8" id="Bj3-NL-wcY">
+                            <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
                         <separator alignment="left" id="80N-Un-nqi"/>
-                        <label width="136" alignment="left" text="WhiteBoard version 3.0.1         © 2017 Wilson Gramer" textAlignment="center" numberOfLines="2" id="kKN-c2-JcS">
+                        <label width="136" alignment="left" text="WhiteBoard version 3.1            © 2017 Wilson Gramer" textAlignment="center" numberOfLines="2" id="kKN-c2-JcS">
                             <fontDescription key="font" type="system" pointSize="9"/>
                         </label>
                     </items>
