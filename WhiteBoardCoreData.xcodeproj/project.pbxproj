@@ -27,6 +27,11 @@
 		C84D4A3E1E4AA9F400D14153 /* ic_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = C84D4A3D1E4AA9F400D14153 /* ic_dark.png */; };
 		C87E2FE41E358BC000DCE2D1 /* PIZZA.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C87E2FE31E358BC000DCE2D1 /* PIZZA.jpg */; };
 		C87E2FE81E358E2D00DCE2D1 /* Ian of Ians.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C87E2FE71E358E2D00DCE2D1 /* Ian of Ians.jpg */; };
+		C8ACEA3B1EF1CE5B00D3CF0A /* icons8-Replay-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C8ACEA3A1EF1CE5B00D3CF0A /* icons8-Replay-100.png */; };
+		C8ACEA3F1EF1CECE00D3CF0A /* icons8-Save-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C8ACEA3E1EF1CECE00D3CF0A /* icons8-Save-100.png */; };
+		C8ACEA411EF1CF0600D3CF0A /* icons8-Cancel-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C8ACEA401EF1CF0500D3CF0A /* icons8-Cancel-100.png */; };
+		C8ACEA431EF1D2BA00D3CF0A /* icons8-Grid-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C8ACEA421EF1D2BA00D3CF0A /* icons8-Grid-100.png */; };
+		C8ACEA451EF1D5F000D3CF0A /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = C8ACEA441EF1D5F000D3CF0A /* black.png */; };
 		C8AD439F1E34F7CA004ED0D0 /* Whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */; };
 		C8B178D41EED79A200324E57 /* Whiteboard-inverted.png in Resources */ = {isa = PBXBuildFile; fileRef = C83AC65C1E35828700932893 /* Whiteboard-inverted.png */; };
 		C8B178D71EED7B7800324E57 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B178D61EED7B7000324E57 /* WatchConnectivity.framework */; };
@@ -138,6 +143,11 @@
 		C84D4A3D1E4AA9F400D14153 /* ic_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_dark.png; path = WhiteBoardCoreData/Resources/ic_dark.png; sourceTree = "<group>"; };
 		C87E2FE31E358BC000DCE2D1 /* PIZZA.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = PIZZA.jpg; path = WhiteBoardCoreData/Resources/PIZZA.jpg; sourceTree = "<group>"; };
 		C87E2FE71E358E2D00DCE2D1 /* Ian of Ians.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Ian of Ians.jpg"; path = "WhiteBoardCoreData/Resources/Ian of Ians.jpg"; sourceTree = "<group>"; };
+		C8ACEA3A1EF1CE5B00D3CF0A /* icons8-Replay-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-Replay-100.png"; path = "../../../Downloads/icons8-Replay-100.png"; sourceTree = "<group>"; };
+		C8ACEA3E1EF1CECE00D3CF0A /* icons8-Save-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-Save-100.png"; path = "../../../Downloads/icons8-Save-100.png"; sourceTree = "<group>"; };
+		C8ACEA401EF1CF0500D3CF0A /* icons8-Cancel-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-Cancel-100.png"; path = "../../../Downloads/icons8-Cancel-100.png"; sourceTree = "<group>"; };
+		C8ACEA421EF1D2BA00D3CF0A /* icons8-Grid-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-Grid-100.png"; path = "../../../Downloads/icons8-Grid-100.png"; sourceTree = "<group>"; };
+		C8ACEA441EF1D5F000D3CF0A /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = ../../../Downloads/black.png; sourceTree = "<group>"; };
 		C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Whiteboard.png; path = WhiteBoardCoreData/Resources/Whiteboard.png; sourceTree = "<group>"; };
 		C8B178D61EED7B7000324E57 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		C8B178D81EED7B8400324E57 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
@@ -241,6 +251,11 @@
 				C8AD439E1E34F7CA004ED0D0 /* Whiteboard.png */,
 				C87E2FE71E358E2D00DCE2D1 /* Ian of Ians.jpg */,
 				C87E2FE31E358BC000DCE2D1 /* PIZZA.jpg */,
+				C8ACEA3A1EF1CE5B00D3CF0A /* icons8-Replay-100.png */,
+				C8ACEA3E1EF1CECE00D3CF0A /* icons8-Save-100.png */,
+				C8ACEA401EF1CF0500D3CF0A /* icons8-Cancel-100.png */,
+				C8ACEA421EF1D2BA00D3CF0A /* icons8-Grid-100.png */,
+				C8ACEA441EF1D5F000D3CF0A /* black.png */,
 			);
 			name = Resources;
 			path = ..;
@@ -541,7 +556,12 @@
 				C8D3803A1E3446F300973167 /* Assets.xcassets in Resources */,
 				C8EA09BD1E3512940090E0F4 /* Settings.bundle in Resources */,
 				C84D4A3A1E4AA90400D14153 /* ic_rainbow.png in Resources */,
+				C8ACEA431EF1D2BA00D3CF0A /* icons8-Grid-100.png in Resources */,
 				C84D4A361E4AA84300D14153 /* ic_text.png in Resources */,
+				C8ACEA3F1EF1CECE00D3CF0A /* icons8-Save-100.png in Resources */,
+				C8ACEA411EF1CF0600D3CF0A /* icons8-Cancel-100.png in Resources */,
+				C8ACEA451EF1D5F000D3CF0A /* black.png in Resources */,
+				C8ACEA3B1EF1CE5B00D3CF0A /* icons8-Replay-100.png in Resources */,
 				C8EA09C01E3544FF0090E0F4 /* script.pl in Resources */,
 				C84D4A3C1E4AA95A00D14153 /* ic_white.png in Resources */,
 				C8AD439F1E34F7CA004ED0D0 /* Whiteboard.png in Resources */,
@@ -810,7 +830,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -854,7 +874,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -873,7 +893,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = D42D4S8LQX;
 				INFOPLIST_FILE = WhiteBoardCoreData/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.neef.ios.WhiteBoardCoreData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -891,7 +911,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = D42D4S8LQX;
 				INFOPLIST_FILE = WhiteBoardCoreData/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.neef.ios.WhiteBoardCoreData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
