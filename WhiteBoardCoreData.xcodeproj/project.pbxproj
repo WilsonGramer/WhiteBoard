@@ -44,8 +44,6 @@
 		C8D3803D1E3446F300973167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D3803B1E3446F300973167 /* LaunchScreen.storyboard */; };
 		C8D380481E3446F300973167 /* WhiteBoardCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D380471E3446F300973167 /* WhiteBoardCoreDataTests.swift */; };
 		C8EA09BD1E3512940090E0F4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C8EA09BC1E3512940090E0F4 /* Settings.bundle */; };
-		C8EA09C01E3544FF0090E0F4 /* script.pl in Resources */ = {isa = PBXBuildFile; fileRef = C8EA09BF1E3544FF0090E0F4 /* script.pl */; };
-		C8EA09C21E3545A80090E0F4 /* License.license in Resources */ = {isa = PBXBuildFile; fileRef = C8EA09C11E3545A80090E0F4 /* License.license */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,8 +161,6 @@
 		C8D380471E3446F300973167 /* WhiteBoardCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoardCoreDataTests.swift; sourceTree = "<group>"; };
 		C8D380491E3446F300973167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8EA09BC1E3512940090E0F4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		C8EA09BF1E3544FF0090E0F4 /* script.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = script.pl; path = WhiteBoardCoreData/Resources/script.pl; sourceTree = "<group>"; };
-		C8EA09C11E3545A80090E0F4 /* License.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.license; path = WhiteBoardCoreData/Resources/License.license; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,7 +282,6 @@
 		C8D380231E3446F300973167 = {
 			isa = PBXGroup;
 			children = (
-				C8EA09BE1E3544E50090E0F4 /* Licenses */,
 				C8EA09BC1E3512940090E0F4 /* Settings.bundle */,
 				C8D3802E1E3446F300973167 /* WhiteBoardCoreData */,
 				C807A4E51EA7EB51002D8784 /* ShareExtension */,
@@ -327,15 +322,6 @@
 				C8D380491E3446F300973167 /* Info.plist */,
 			);
 			path = WhiteBoardCoreDataTests;
-			sourceTree = "<group>";
-		};
-		C8EA09BE1E3544E50090E0F4 /* Licenses */ = {
-			isa = PBXGroup;
-			children = (
-				C8EA09BF1E3544FF0090E0F4 /* script.pl */,
-				C8EA09C11E3545A80090E0F4 /* License.license */,
-			);
-			name = Licenses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,7 +532,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C84D4A3E1E4AA9F400D14153 /* ic_dark.png in Resources */,
-				C8EA09C21E3545A80090E0F4 /* License.license in Resources */,
 				C87E2FE41E358BC000DCE2D1 /* PIZZA.jpg in Resources */,
 				C83AC65D1E35828700932893 /* Whiteboard-inverted.png in Resources */,
 				C84D4A381E4AA8CD00D14153 /* ic_textdark.png in Resources */,
@@ -562,7 +547,6 @@
 				C8ACEA411EF1CF0600D3CF0A /* icons8-Cancel-100.png in Resources */,
 				C8ACEA451EF1D5F000D3CF0A /* black.png in Resources */,
 				C8ACEA3B1EF1CE5B00D3CF0A /* icons8-Replay-100.png in Resources */,
-				C8EA09C01E3544FF0090E0F4 /* script.pl in Resources */,
 				C84D4A3C1E4AA95A00D14153 /* ic_white.png in Resources */,
 				C8AD439F1E34F7CA004ED0D0 /* Whiteboard.png in Resources */,
 				C8D380351E3446F300973167 /* Main.storyboard in Resources */,
